@@ -772,8 +772,8 @@ function App() {
   return (
     <main className="app">
       <section className="start-panel">
-        <p className="eyebrow">BOOST</p>
-        <h1>Begin-Oriented Operating SysTem</h1>
+        <p className="eyebrow">Begin-Oriented Operating SysTem</p>
+        <h1>BOOST</h1>
         <p>
           まずは、今の気分と使える時間を選んでください。
         </p>
