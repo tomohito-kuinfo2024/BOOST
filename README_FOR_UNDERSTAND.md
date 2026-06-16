@@ -608,6 +608,19 @@ Step 3: 余力があればこれ
 - 90分〜の場合は、危険度・期限をより重視し、少し重い課題も候補に入れる
 - ただし `motivationLevel = 1` のときは、時間が長くても Step 1 に始めやすい課題を置く
 
+「最初の5分」は、課題のジャンルごとに文章を変える。
+テンプレートは `src/App.jsx` の `firstFiveMinuteTemplatesByGenre` にまとめている。
+
+各ジャンルには以下の4種類の文を持たせている。
+
+- `low`: 気分がかなり低いとき
+- `short`: 30分の作業枠
+- `medium`: 60分の作業枠
+- `long`: 90分以上の作業枠
+
+実際にどの文を使うかは `getFirstFiveMinuteTemplateType()` で決める。
+その後、`createFirstFiveMinutes()` が `{target}` に最初のやるべきタスクを差し込んで表示文を作る。
+
 `motivationLevel = 1` のときだけ、課題に入る前に `Step 0: リフレッシュ` を表示する。
 これは、そもそも作業できる状態ではない可能性があるため。
 

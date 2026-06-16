@@ -335,6 +335,105 @@ const defaultRefreshStepText = {
     '今は作業に入る前に、少しだけ状態を整える時間を置きます。水を飲んで、深呼吸して、机の上を1つだけ整えます。',
 }
 
+const firstFiveMinuteTemplatesByGenre = {
+  試験勉強: {
+    low: '{target}を開いて、最初の1ページだけ眺めます。',
+    short:
+      '{target}を見ながら、覚える・解く・確認するものを1つだけ選んで進めます。',
+    medium:
+      '{target}を開いて、優先度が高そうな単元を1つ選び、例題や確認問題を1問だけ進めます。',
+    long: '{target}から始めて、1単元の理解・暗記・演習のどれかを一区切りまで進めます。',
+  },
+  レポート: {
+    low: '{target}を開いて、タイトル・見出し・提出条件だけ確認します。',
+    short:
+      '{target}を見ながら、次に書く見出しや一文を1つだけ決めて入力します。',
+    medium:
+      '{target}を開いて、構成・根拠・図表のどれか1つを選んで進めます。',
+    long: '{target}から始めて、1つの見出しを書き切るか、必要な根拠をまとめます。',
+  },
+  課題: {
+    low: '{target}を開いて、提出物と締切だけ確認します。',
+    short:
+      '{target}を見ながら、最初に埋められそうな設問や作業を1つだけ進めます。',
+    medium:
+      '{target}を開いて、資料の該当箇所を探して簡単な設問から手をつけます。',
+    long: '{target}の進捗の続きを、1問・1項目・1ファイルのどれかを一区切りまで進めます。',
+  },
+  資料作成: {
+    low: '{target}を開いて、今あるスライドやメモを眺めて不足箇所を1つだけ見つけます。',
+    short:
+      '{target}を見ながら、1枚分の見出しや箇条書きをざっくり作ります。',
+    medium:
+      '{target}を開いて、1枚のスライドや1つの説明ブロックを形にします。',
+    long: '{target}から始めて、構成の整理・資料作成・見直しのどれかを一区切りまで進めます。',
+  },
+  会議準備: {
+    low: '{target}を開いて、会議で確認したいことを1つだけメモします。',
+    short:
+      '{target}を見ながら、議題・確認事項・相談事項にざっと目を通します。',
+    medium:
+      '{target}を開いて、資料を確認して記入事項を1つだけ書きます。',
+    long: '{target}から始めて、議題整理・資料確認・発言メモ作成まで一区切り進めます。',
+  },
+  資格勉強: {
+    low: '{target}を開いて、今日触る範囲や問題を1つだけ選びます。',
+    short:
+      '{target}を見ながら、単語・用語・問題を1セットだけ進めます。',
+    medium:
+      '{target}を開いて、苦手そうな範囲を1つ選び、解説確認か演習に入ります。',
+    long: '{target}から始めて、1テーマの理解・暗記・演習を一区切りまで進めます。',
+  },
+  個人開発: {
+    low: '{target}を開いて、今の状態と次に触るファイルを1つだけ確認します。',
+    short:
+      '{target}を見ながら、小さな修正・メモ・動作確認のどれか1つを進めます。',
+    medium:
+      '{target}を開いて、1つの画面・関数・スタイル修正に絞って手を動かします。',
+    long: '{target}から始めて、実装・動作確認・メモ更新まで一区切り進めます。',
+  },
+  部活: {
+    low: '{target}を開いて、次に確認する連絡や準備物を1つだけ見ます。',
+    short:
+      '{target}を見ながら、連絡・準備・確認のどれかを1つだけ進めます。',
+    medium:
+      '{target}を開いて、必要な準備や共有事項をまとめます。',
+    long: '{target}から始めて、準備・整理・連絡を一区切りまで進めます。',
+  },
+  '就活・インターン': {
+    low: '{target}を開いて、企業名・締切・次に必要な作業を1つだけ確認します。',
+    short:
+      '{target}を見ながら、ESの一文・企業メモ・日程確認のどれかを進めます。',
+    medium:
+      '{target}を開いて、応募書類・企業研究・面接準備のどれか1つに絞ります。',
+    long: '{target}から始めて、ES作成・企業研究・面接メモを一区切りまで進めます。',
+  },
+  研究: {
+    low: '{target}を開いて、今わかっていることと詰まっていることを1つだけ確認します。',
+    short:
+      '{target}を見ながら、論文・実験メモ・考察のどれかを1つだけ進めます。',
+    medium:
+      '{target}を開いて、調査・整理・分析のどれか1つに絞って進めます。',
+    long: '{target}から始めて、まずは次のステップまで進めます。',
+  },
+  語学: {
+    low: '{target}を開いて、単語・例文・音声のどれか好きな1つだけ読みます。',
+    short:
+      '{target}を見ながら、単語確認・音読・短い演習のどれかを1つだけ進めます。',
+    medium:
+      '{target}を開いて、読む・聞く・書く・話すのどれか1つに絞ります。',
+    long: '{target}から始めて、単語・読解・リスニング・作文のどれかを一区切りまで進めます。',
+  },
+  その他: {
+    low: '{target}の前回やった場所を見て軽く思い出します。',
+    short:
+      '{target}を見ながら、次の小さな作業を1つだけ進めます。',
+    medium:
+      '{target}を開いて、優先度が高そうな部分を1つ選び、そこから作業を始めます。',
+    long: '{target}から始めて、理解・整理・作成のどれかを一区切りまで進めます。',
+  },
+}
+
 function getTaskStartEase(taskProject) {
   return taskProject.startEase ?? 3
 }
@@ -484,20 +583,29 @@ function createFirstFiveMinutes(taskProject, mood, timeId) {
   const targetText = firstSubTask
     ? `「${firstSubTask}」に関係するところ`
     : '課題ページや資料'
+  const templateType = getFirstFiveMinuteTemplateType(mood, timeId)
+  const template =
+    firstFiveMinuteTemplatesByGenre[taskProject.genre]?.[templateType] ??
+    firstFiveMinuteTemplatesByGenre.その他[templateType]
+  const actionText = template.replace('{target}', targetText)
 
+  return `${actionText}${timeGuides[timeId]}`
+}
+
+function getFirstFiveMinuteTemplateType(mood, timeId) {
   if (mood.motivationLevel === 1) {
-    return `${targetText}を開いて、今日触る場所を1つだけ決めます。${timeGuides[timeId]}`
+    return 'low'
   }
 
   if (timeId === '30') {
-    return `${targetText}を見ながら、次にやる小さな作業を1つだけ決めて進めます。${timeGuides[timeId]}`
+    return 'short'
   }
 
   if (timeId === '60') {
-    return `${targetText}を開いて、優先度が高そうな部分を1つ選び、そこから作業を始めます。${timeGuides[timeId]}`
+    return 'medium'
   }
 
-  return `${targetText}から始めて、理解・演習・作成のどれか1つを一区切りまで進めます。${timeGuides[timeId]}`
+  return 'long'
 }
 
 function createId(prefix) {
